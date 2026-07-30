@@ -39,8 +39,18 @@ Main extends GameApplication {
     private GameContext context;
 
     // Track which directional keys are currently held. We combine all four
+    // into a single direction vector once per frame in onUpdate() rather
+    // than issuing a separate MoveCommand per key - if we issued one
+    // MoveCommand per held key, holding two keys at once (e.g. up + left
+    // for a diagonal) would move the ship twice in one frame and break the
+    // "diagonal movement is not faster than straight movement" rule that
+    // ShipComponent.move() otherwise guarantees via vector normalization.
+    private boolean moveUp, moveDown, moveLeft, moveRight;
 
-
+    @Override
+    protected void initSettings(GameSettings settings) {
+        GameConfig config = GameConfig.getInstance();
+        settings.setWidth(config.getScreenWidth());
         settings.setHeight(config.getScreenHeight());
         settings.setTitle("LBYCPOB Credits");
         settings.setVersion("1.0");

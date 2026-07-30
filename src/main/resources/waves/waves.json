@@ -281,7 +281,7 @@
       "entries": [
         {
           "name": "Encapsulation",
-          "health": 40,
+          "health": 7,
           "isPillarBoss": true,
           "firePattern": {
             "type": "SPIRAL",
@@ -293,7 +293,7 @@
         },
         {
           "name": "Abstraction",
-          "health": 40,
+          "health": 7,
           "isPillarBoss": true,
           "firePattern": {
             "type": "RADIAL_BURST",
@@ -305,7 +305,7 @@
         },
         {
           "name": "Inheritance",
-          "health": 40,
+          "health": 7,
           "isPillarBoss": true,
           "firePattern": {
             "type": "SPREAD",
@@ -318,7 +318,7 @@
         },
         {
           "name": "Polymorphism",
-          "health": 45,
+          "health": 7,
           "isPillarBoss": true,
           "firePattern": {
             "type": "RANDOM",
@@ -337,7 +337,7 @@
       "entries": [
         {
           "name": "Engr. Jared Abayan",
-          "health": 60,
+          "health": 7,
           "isPillarBoss": true,
           "firePattern": {
             "type": "SPIRAL",
@@ -355,7 +355,7 @@
       "entries": [
         {
           "name": "Dr. Ronnel Agulto",
-          "health": 60,
+          "health": 7,
           "isPillarBoss": true,
           "firePattern": {
             "type": "RANDOM",
@@ -374,7 +374,7 @@
       "entries": [
         {
           "name": "Dr. Melvin Cabatuan",
-          "health": 60,
+          "health": 7,
           "isPillarBoss": true,
           "firePattern": {
             "type": "RADIAL_BURST",
@@ -392,7 +392,7 @@
       "entries": [
         {
           "name": "Dr. Cesar Llorente",
-          "health": 60,
+          "health": 7,
           "isPillarBoss": true,
           "firePattern": {
             "type": "WALL",
@@ -412,19 +412,20 @@
         {
           "name": "Kyle Cruz",
           "health": 60,
-          "isPillarBoss": false,
+          "isPillarBoss": true,
           "firePattern": {
             "type": "WALL",
             "durability": "INDESTRUCTIBLE",
-            "shotInterval": 0.12,
+            "baseInterval": 1.1,
             "bulletSpeed": 170,
-            "angleStepDegrees": 11
+            "wallSegments": 12,
+            "wallWidth": 640
           }
         },
         {
           "name": "Ken Rasing",
           "health": 60,
-          "isPillarBoss": false,
+          "isPillarBoss": true,
           "firePattern": {
             "type": "SPIRAL",
             "durability": "TOUGH",
@@ -436,13 +437,13 @@
         {
           "name": "Serena Smith",
           "health": 60,
-          "isPillarBoss": false,
+          "isPillarBoss": true,
           "firePattern": {
             "type": "RADIAL_BURST",
             "durability": "FRAGILE",
-            "shotInterval": 0.12,
-            "bulletSpeed": 170,
-            "angleStepDegrees": 11
+            "baseInterval": 1.5,
+            "bulletSpeed": 150,
+            "bulletsPerBurst": 16
           }
         }
       ]
